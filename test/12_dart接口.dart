@@ -1,21 +1,24 @@
-main(List<String> args) {}
+main(List<String> args) {
+  Mysql mysql = new Mysql();
+  mysql.add('teste');
+}
 
 // 定义一个db库支持musql mssql mongodb,三个类方法相同
 
 abstract class Db {
   String uri = ''; // 数据库地址
   // 当作为接口
-  add();
+  add(data);
   save();
   delete();
 }
 
 // 实现接口
-class mysql implements Db {
+class Mysql implements Db {
   @override
-  add() {
+  add(data) {
     // TODO: implement add
-    throw UnimplementedError();
+    print('这是新增方法${data}');
   }
 
   @override
@@ -34,9 +37,9 @@ class mysql implements Db {
   String uri = '';
 }
 
-class mssql implements Db {
+class Mssql implements Db {
   @override
-  add() {
+  add(data) {
     // TODO: implement add
     throw UnimplementedError();
   }

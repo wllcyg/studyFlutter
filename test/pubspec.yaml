@@ -1,0 +1,7 @@
+name: myauth
+description: A new flutter module project.
+environment:
+  sdk: '>=2.10.0 <3.0.0'
+dependencies:
+    http: ^0.13.3
+    date_format: ^2.12.0
